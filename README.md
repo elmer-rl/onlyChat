@@ -19,10 +19,20 @@ OnlyChat es una aplicación de chat en tiempo real, inspirada en la funcionalida
 
 Captura de pantalla de OnlyChat en vista de escritorio:
 
+- Iniciar Sesión
+
  ![Pantalla de inicio de sesión](https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/login.png)
-- ![Pantalla de registro](https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/register.png)
+
+- Registro
+
+ ![Pantalla de registro](https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/register.png)
+
+- Login incorrecto
+
  ![Pantalla de alerta de login fallido](https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/login-alert.png)
-https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/login-alert.png
+
+ - Char en acción
+
  ![Chat en Acción](https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/messages-page.png)
 
 Captura de pantalla de OnlyChat en vista mobile:
