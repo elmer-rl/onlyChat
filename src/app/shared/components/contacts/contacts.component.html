@@ -1,0 +1,20 @@
+<!-- Contacts -->
+<div (click)="openChat(item)" *ngFor="let item of contacts; let i = index;" class="userContact mt-1 bg-white px-3 flex items-center hover:bg-grey-lighter cursor-pointer">
+    <div>
+        <img class="h-12 w-12 rounded-full"
+                src="https://www.pngkey.com/png/full/72-729716_user-avatar-png-graphic-free-download-icon.png"/>
+    </div>
+    <div class="hidden md:block ml-4 flex-1 border-b border-grey-lighter py-4">
+        <div class="flex items-bottom justify-between">
+            <p class="text-grey-darkest">
+                {{item?.userName}}
+            </p>
+            <p class="text-xs text-grey-darkest">
+                {{item.lastConection}}
+            </p>
+        </div>
+        <p class="text-grey-dark mt-1 text-sm">
+            {{item?.lastMessage}}
+        </p>
+    </div>
+</div>

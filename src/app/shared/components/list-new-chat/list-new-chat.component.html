@@ -1,0 +1,19 @@
+@for (item of contacts; track $index) {
+  @if(user.uid !== item.uid){
+      <div (click)="createNewChat(item)" class="userContact mt-1 bg-white px-3 flex items-center hover:bg-grey-lighter cursor-pointer">
+          <div>
+            <img class="h-12 w-12 rounded-full"
+                  src="https://png.pngtree.com/png-clipart/20190629/original/pngtree-vector-remove-user-icon-png-image_4102549.jpg"/>
+        </div>
+        <div class="hidden md:block ml-4 flex-1 border-b border-grey-lighter py-4">
+            <div class="flex items-bottom justify-between">
+                <p class="text-grey-darkest">
+                  {{item?.userName}}
+                </p>
+        </div>
+        </div>
+    </div>
+  }
+}
+
+

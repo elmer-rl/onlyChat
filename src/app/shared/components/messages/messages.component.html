@@ -1,0 +1,20 @@
+<!-- Messages -->
+<div class="flex-1 overflow-auto" style="background-color: #DAD3CC; height:100%" #chatContainer>
+    <div class="py-2 px-3" #chatContainer>
+        @if(currentChat){
+        <div *ngFor="let chat of bodyChat?.chats" [ngClass]="{'justify-end': currentChat.userName !== chat.userName }" class="flex mb-2">
+            <div [ngClass]="{'bg-own-chat': currentChat.userName !== chat.userName, 'bg-other-chat': currentChat.userName === chat.userName }" class="rounded py-2 px-3 chat">
+                <!-- <p class="text-sm text-teal">
+                {{ chat.userName}}
+                </p> -->
+                <p class="text-sm mt-1">
+                    {{chat.message}}
+                </p>
+                <p class="text-right text-xs text-grey-dark mt-1">
+                    {{chat.dateTime}}
+                </p>
+            </div>
+        </div>
+        }
+    </div>
+</div>
