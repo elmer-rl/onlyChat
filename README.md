@@ -2,7 +2,7 @@
 
 ## Descripción
 
-OnlyChat es una aplicación de chat en tiempo real, inspirada en la funcionalidad y simplicidad de aplicaciones líderes como WhatsApp. Este proyecto se distingue por su stack tecnológico, utilizando Angular en el frontend y Firebase como una solución backend robusta, ofreciendo una alternativa moderna a las arquitecturas tradicionales basadas en Express, Socket.io y MongoDB. OnlyChat brinda una plataforma ágil y accesible para comunicaciones instantáneas, manteniendo la escalabilidad y la seguridad en su núcleo.
+OnlyChat es una aplicación de chat en tiempo real, inspirada en la funcionalidad y simplicidad de aplicaciones líderes como WhatsApp, enfocada en ofrecer una experiencia de chat simplificada. Este proyecto se distingue por su stack tecnológico, utilizando Angular en el frontend y Firebase como una solución backend robusta, ofreciendo una alternativa moderna a las arquitecturas tradicionales basadas en Express, Socket.io y MongoDB. OnlyChat brinda una plataforma ágil y accesible para comunicaciones instantáneas, manteniendo la escalabilidad y la seguridad en su núcleo.
 
 ## Características Principales
 
@@ -17,14 +17,23 @@ OnlyChat es una aplicación de chat en tiempo real, inspirada en la funcionalida
 
 ## Capturas de Pantalla
 
-Aquí incluirás capturas de pantalla de tu aplicación. Por ejemplo:
+Captura de pantalla de OnlyChat en vista de escritorio:
 
-- `![Pantalla Principal](url-de-la-imagen)`
-- `![Chat en Acción](url-de-la-imagen)`
+- `![Pantalla de inicio de sesión](https://github.com/elmer-rl/onlyChat/blob/master/src/assets/images/login.png)`
+- `![Pantalla de registro](https://github.com/elmer-rl/onlyChat/blob/master/src/assets/images/register.png)`
+- `![Pantalla de alerta de login fallido](https://github.com/elmer-rl/onlyChat/blob/master/src/assets/images/login-alert.png)`
+- `![Chat en Acción](https://github.com/elmer-rl/onlyChat/blob/master/src/assets/images/messages-page.png)`
+
+Captura de pantalla de OnlyChat en vista mobile:
+
+- `![OnlyChat mobile](https://github.com/elmer-rl/onlyChat/blob/master/src/assets/images/onlyChat-mobile.png)` 
+
 
 ## Cómo Empezar
 
 ### Prerrequisitos
+
+- Instalación de [Angular v17](https://angular.io/) Angular cli.
 
 - Instalación de [Node.js](https://nodejs.org/en/) y npm.
 
@@ -34,28 +43,54 @@ Aquí incluirás capturas de pantalla de tu aplicación. Por ejemplo:
 
 ```sh
 git clone https://github.com/tuUsuario/OnlyChat.git
+
 cd OnlyChat
 
-## Development server
+```
+### Configuración de Firebase
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para que OnlyChat funcione correctamente, necesitarás configurar Firebase:
 
-## Code scaffolding
+- Crear un Proyecto en Firebase:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Ve a [Firebase Console.](https://firebase.google.com/)
+2. Haz clic en "Añadir proyecto" y sigue las instrucciones.
+3. Nombrar el proyecto "OnlyChat" (el nombre es opcional).
+4. Crear una Aplicación Web:
 
-## Build
+Dentro de tu proyecto de Firebase, navega a la sección "Visión general" y haz clic en "Añadir aplicación" para agregar una nueva aplicación web.
+Sigue los pasos para registrar tu aplicación.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Configurar el SDK de Firebase:
 
-## Running unit tests
+Al finalizar el registro de tu aplicación web, Firebase te proporcionará tu configuración personalizada del SDK en formato JSON.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Implementar la Configuración del SDK en Angular:
 
-## Running end-to-end tests
+1. En tu proyecto Angular, encuentra el archivo environment.ts dentro de la carpeta src/environments/.
+1. Añade tu configuración de Firebase a este archivo de la siguiente manera:
+```sh
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "tuApiKey",
+    authDomain: "tuAuthDomain",
+    projectId: "tuProjectId",
+    storageBucket: "tuStorageBucket",
+    messagingSenderId: "tuMessagingSenderId",
+    appId: "tuAppId",
+    measurementId: "tuMeasurementId"
+  }
+};
+```
+- Asegurate de realizar la configuración de acuerdo a los pasos indicados anteriormente, de esta manera no tendrá errores al levantar el proyecto.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Continuar con la instalación de dependencias y levantar el servidor local,
+```sh
+### Instalación de dependencias
 
-## Further help
+npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Iniciar el servidor local
+
+npm start
