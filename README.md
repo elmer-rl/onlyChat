@@ -31,7 +31,7 @@ Captura de pantalla de OnlyChat en vista de escritorio:
 
  ![Pantalla de alerta de login fallido](https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/login-alert.png)
 
- - Char en acción
+ - onlyChat en acción
 
  ![Chat en Acción](https://raw.githubusercontent.com/elmer-rl/onlyChat/master/src/assets/images/messages-page.png)
 
@@ -94,7 +94,7 @@ export const environment = {
   }
 };
 ```
-- Asegurate de realizar la configuración de acuerdo a los pasos indicados anteriormente, de esta manera no tendrá errores al levantar el proyecto.
+- Asegúrate de realizar la configuración de acuerdo a los pasos indicados anteriormente, de esta manera no tendrá errores al levantar el proyecto.
 
 Continuar con la instalación de dependencias y levantar el servidor local,
 ```sh
