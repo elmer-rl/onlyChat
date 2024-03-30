@@ -50,10 +50,10 @@ Captura de pantalla de OnlyChat en vista mobile:
 
 ### Instalación
 
-1. Clona el repositorio:
+1. Clona el repositorio: SSH
 
 ```sh
-git clone https://github.com/tuUsuario/OnlyChat.git
+git clone git@github.com:elmer-rl/onlyChat.git
 
 cd OnlyChat
 
